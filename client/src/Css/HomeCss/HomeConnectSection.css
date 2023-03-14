@@ -1,0 +1,160 @@
+.Home-Connect-Titles{
+    display: none;
+}
+
+.Home-Connect-Container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 2rem;
+}
+
+.Home-Connect-Left-Column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Mobile-Home-Connect-Heading{
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.Home-Connect-Cta-btn {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Home-Connect-Cta-btn{
+    width: 295px;
+    height: 65px;
+    background-color: #181D31;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+}
+
+.Home-Connect-Cta-btn > button {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+.Home-Connect-Right-Column {
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+}
+
+.Home-Connect-Cards{
+    display: grid;
+    place-items: center;
+    gap:2.25rem
+}
+
+
+.Home-Connect-Cards > .card{
+    height: 215px;
+    width: clamp(266.15px, 80%, 376px);
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 30px;
+}
+
+.card1, .card3{
+    background-color: #F6D105;
+}
+
+.card2 , .card4{
+    background-color: #181D31;
+    color: white;
+}
+
+@media (min-width: 48em) {
+    .Mobile-Home-Connect-Heading{
+        font-size: 32px;
+        font-weight: 800;
+    }
+    .Home-Connect-Cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 0rem
+    }
+
+    .card4{
+        background-color: #F6D105;
+        color: black;
+    }
+
+    .card3{
+        background-color: #181D31;
+        color: white;
+    }
+}
+
+@media (min-width: 1200px){
+    .Mobile-Home-Connect-Heading{
+        display: none;
+    }
+    .Home-Connect-Titles{
+    display: block;
+    }
+
+    .Home-Connect-Container{
+        flex-direction: row;
+
+    }
+    .Home-Connect-Left-Column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* margin-right: -10rem; */
+    }
+
+    .Left-Column-Main-Content{
+        display: flex;
+        flex-direction: column;
+        width: 559px;
+    }
+    .Home-Connect-Heading{
+        font-size: 40px;
+        font-weight: bold;
+        text-decoration: underline;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .Home-Connect-Heading::before{
+        content: '';
+        width: 200px;
+        z-index: -20;
+        aspect-ratio: 1;
+        background-color: #D9D9D9;
+        display: block;
+        position: absolute;
+        top: 0;
+        border-radius: 100vh;
+        margin-top: -80px;
+        margin-left: -80px;
+    }
+
+    .Home-Connect-Sub-Heading{
+        font-size: 24px;
+        font-weight: lighter;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+    }
+}

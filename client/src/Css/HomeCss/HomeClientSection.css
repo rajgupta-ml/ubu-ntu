@@ -1,0 +1,97 @@
+.Client-Main-Container{
+    background-color: #F6D105;
+    margin-top: 2rem;
+    height: clamp(316px, 50vw, 745px);
+    display: grid;
+    place-items: center;
+}
+
+.Client-Right-Column{
+    display: none;
+
+}
+
+.Client-Heading-Container{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.Client-Left-Column{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Client-Row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 12px;
+
+}
+
+.Arrow-Container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 90px;
+   aspect-ratio: 1;
+   border: 1px solid black;
+   border-radius: 100vh;
+}
+
+.Arrow-Container > img {
+    width: clamp(8px,2vw, 20px);
+}
+
+
+@media (min-width: 48em){
+    .Client-Main-Container{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+
+    .Client-Left-Column{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Client-Right-Column{
+        display: block;
+        width: 85%;
+    }
+
+    .Client-Heading-Container{
+        font-size: 32px;
+    }
+    .Wrapper{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .Client-Row{
+        font-size: 16px;
+    }
+
+}
+
+
+@media (min-width: 1200px){
+    .Client-Heading-Container{
+        font-size: 60px;
+    }
+
+    .Client-Row{
+        font-size: 26px;
+        gap: 2.5rem;
+    }
+}
+

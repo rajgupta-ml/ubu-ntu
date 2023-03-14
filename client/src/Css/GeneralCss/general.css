@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+body{
+    background-color: var(--bg-body);
+    font-family: 'Inter', sans-serif;
+}
+:root{
+    --bg-body: #eaeaea;
+     --bg-main: #f6d105;
+    --bg-accent: #181D31;
+    --clr-txt: #fff;
+    --clr-txt-invert: #000; 
+
+    --fs-100: 
+
+}
+
+/* Utility Classes */
+
+.bg-body{
+    background: var(--bg-body);
+}
+
+.bg-main{
+    background-color: var(--bg-main);
+}
+
+.bg-accent{
+    background: var(--bg-accent);
+}
+
+
+body{
+    background-color: var(--bg-body);
+}
+
+.max-width-container {
+    --max-width: 1800px;
+    --padding: 2rem;
+    width: min(var(--max-width), 100% - var(--padding));
+    margin-inline: auto;
+}
+ 

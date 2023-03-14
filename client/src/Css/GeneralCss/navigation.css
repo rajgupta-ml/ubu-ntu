@@ -1,0 +1,228 @@
+
+
+:root{
+    --bg-body: #eaeaea;
+     --bg-main: #f6d105;
+    --bg-accent: #181D31;
+    --clr-txt: #fff;
+    --clr-txt-invert: #000; 
+
+    --fs-100: 
+
+}
+
+/* General Componets of Navigation */
+.Navigation-Logo-Container{
+    width: clamp(6.5rem, 30%, 11.563rem);
+}
+
+/* ------------------------------------ */
+
+
+.Desktop-Navigation-Container{
+    display: none;
+}
+
+/* Mobile Navigation */
+.Mobile-Navigation-Container{
+    margin-top: 1.438rem;
+    border-radius: 1.25rem;
+    padding-inline: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-main);
+}
+
+
+
+
+.Mobile-Hamburger-Menu, .Mobile-Hamburger-Menu-Open{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.125rem;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.Menu-First-Rectangle, .Menu-Second-Rectangle{
+    width: 1.125rem;
+    height: 0.125rem;
+    background-color: var(--clr-txt-invert);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* ........................................ */
+
+/* Mobile-Navigation-Navigation-link-Container */
+
+.Mobile-Hamburger-Menu-Open{
+    position: fixed;
+    background-color: var(--bg-main);
+    min-width: clamp(30px, 10%, 60px);
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    gap: 0;
+    right: 0;
+    margin-right: 30px;
+}
+
+.Mobile-Hamburger-Menu{
+    min-width: clamp(30px, 10%, 60px);
+    aspect-ratio: 1;
+    background-color: var(--bg-main);
+        border-radius: 100vh;
+}
+
+
+
+.Mobile-Hamburger-Menu-Open > .Menu-First-Rectangle{
+    position: fixed;
+    transform: rotate(45deg);
+}
+.Mobile-Hamburger-Menu-Open > .Menu-Second-Rectangle{
+    position: fixed;
+    transform: rotate(-45deg);
+}
+
+
+.Menu-Container{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+.Mobile-Navigation{
+    display: flex;
+    flex-direction: column;
+    gap: 1.625rem;
+}
+
+.Mobile-Navigation > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    width: 100vw;
+}
+.Mobile-Navigation > ul > li {
+    list-style: none;
+    
+}
+
+.Mobile-Navigation > ul > li > a{
+    text-decoration: none;
+    color: var(--clr-txt);
+    font-size: 2rem;
+    padding-left: clamp(1rem, 10%, 2rem);
+}
+
+.Mobile-Navigation > ul > li > .active{
+    font-weight: 800;
+    border-left: 3px solid var(--bg-main);
+}
+
+
+.Opened-Menu-Divider{
+
+    width: 70%;
+    height: 2px;
+    background: var(--clr-txt);
+    margin-left: clamp(1rem, 10%, 2rem);
+}
+
+.Opened-Mobile-Menu-Social-icons{
+    display: flex;
+    margin-left: clamp(1rem, 10%, 2rem);
+    gap: 2rem;
+}
+
+.Opened-Mobile-Menu-Social-icons > *{
+    width: 50px;
+    align-self: 1;
+}
+
+
+
+/* Media Query For Tablets */
+
+@media (min-width: 48em){
+    .Mobile-Navigation-Container{
+        background-color: transparent;
+    }
+}
+
+
+@media (min-width: 1200px){
+    .Mobile-Navigation-Container{
+        display: none;
+    }
+
+    .Desktop-Navigation-Container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .Desktop-Navigation-Left-Column{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .Desktop-Navigation{
+        margin-right: 3rem;
+    }
+
+    .Desktop-Navigation-items{
+        display: flex;
+        gap: 1.875rem;
+        list-style: none;
+    }
+
+    .Desktop-Navigation-items > li > a{
+        text-decoration: none;
+        font-size: 20px;
+        color: var(--clr-txt-invert);
+    }
+
+    .Desktop-Navigation-items > li > .active{
+        text-decoration: none;
+        font-size: 20px;
+        color: var(--clr-txt-invert);
+        width: 78px;
+        padding-block: 0.535rem;
+        padding-inline: 1.2375rem;
+        background-color: var(--bg-main);
+        font-weight: 800;
+        border-radius: 10px;
+
+    }
+      .Desktop-Navigation-Right-Column{
+        display: flex;
+    }
+
+    .Desktop-Social-items{
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        background-color: var(--bg-main);
+        width: 9.063rem;
+        height: 3.188rem;
+        border-radius: 10px;
+    }
+
+    
+
+
+}

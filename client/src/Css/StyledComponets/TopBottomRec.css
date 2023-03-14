@@ -1,0 +1,11 @@
+.Rectangle{
+    position: absolute;
+    height: 100vh;
+    width: clamp(265px, 28%, 597px);
+    z-index: -10;
+}
+@media (max-width: 767px){
+    .Rectangle{
+        display: none;
+    }
+}
